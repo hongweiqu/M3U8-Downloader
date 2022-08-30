@@ -1033,7 +1033,8 @@ async function startDownload(object, iidx) {
             return;
         }
         let outPathMP4 = path.join(dir, Date.now() + ".mp4");
-        let outPathMP4_ = path.join(pathDownloadDir, taskName.replace(/["“”，\.。\|\/\\ \*:;\?<>]/g, "") + '.mp4');
+        //let outPathMP4_ = path.join(pathDownloadDir, taskName.replace(/["“”，\.。\|\/\\ \*:;\?<>]/g, "") + '.mp4');
+        let outPathMP4_ = path.join(pathDownloadDir, taskName + '.mp4');
         if (fs.existsSync(ffmpegPath)) {
             let ffmpegInputStream = new FFmpegStreamReadable(null);
             new ffmpeg(ffmpegInputStream)
